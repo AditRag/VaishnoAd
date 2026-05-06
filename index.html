@@ -1,0 +1,875 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Vaishno Enterprises electrical shop in RDC Raj Nagar, Ghaziabad. Call for genuine wires, switches, lights and same day delivery.">
+  <meta name="theme-color" content="#1e40af">
+  <meta name="color-scheme" content="light dark">
+  <title>Vaishno Enterprises | Electrical Solutions Ghaziabad</title>
+  <link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+  <link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+  <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700&f[]=boska@500,700" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #1e40af;
+      --primary-strong: #173184;
+      --success: #10b981;
+      --success-strong: #047857;
+      --bg: #f8fafc;
+      --surface: #ffffff;
+      --surface-2: #eaf1ff;
+      --text: #0f172a;
+      --muted: #475569;
+      --line: rgba(15, 23, 42, 0.12);
+      --shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+      --header-h: 68px;
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+      font-family: "Satoshi", system-ui, sans-serif;
+    }
+
+    :root[data-theme="dark"] {
+      --bg: #0f172a;
+      --surface: #16233a;
+      --surface-2: #1d2c48;
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --line: rgba(248, 250, 252, 0.16);
+      --shadow: 0 20px 40px rgba(0, 0, 0, 0.32);
+      --primary-strong: #8fb3ff;
+      color-scheme: dark;
+    }
+
+    * { box-sizing: border-box; }
+
+    html {
+      min-width: 320px;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100svh;
+      background: var(--bg);
+      color: var(--text);
+      font: 400 1rem/1.6 "Satoshi", system-ui, sans-serif;
+      letter-spacing: 0;
+      transition: background-color 160ms ease, color 160ms ease;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, transparent 0 23px, rgba(30, 64, 175, 0.07) 24px),
+        linear-gradient(0deg, transparent 0 23px, rgba(30, 64, 175, 0.07) 24px);
+      background-size: 24px 24px;
+      mask-image: linear-gradient(to bottom, black, transparent 72%);
+    }
+
+    a { color: inherit; }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .page {
+      min-height: 100svh;
+        padding-bottom: 32px;
+    }
+
+    .site-header {
+      position: fixed;
+      inset: 0 0 auto;
+      z-index: 20;
+      min-height: var(--header-h);
+      padding: 10px max(16px, env(safe-area-inset-left)) 10px max(16px, env(safe-area-inset-right));
+      background: color-mix(in srgb, var(--surface) 92%, transparent);
+      border-bottom: 1px solid var(--line);
+      backdrop-filter: blur(16px);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 0;
+      text-decoration: none;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 44px;
+      height: 44px;
+      flex: 0 0 44px;
+      place-items: center;
+      border-radius: 12px;
+      background: var(--primary);
+      color: #ffffff;
+      box-shadow: 0 12px 24px rgba(30, 64, 175, 0.24);
+      font-weight: 700;
+    }
+
+    .brand-text {
+      display: grid;
+      min-width: 0;
+      line-height: 1.15;
+    }
+
+    .brand-name {
+      overflow: hidden;
+      max-width: 210px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      font-weight: 700;
+    }
+
+    .brand-place {
+      color: var(--muted);
+      font-size: 0.82rem;
+      font-weight: 500;
+    }
+
+    .theme-toggle {
+      display: inline-grid;
+      width: 52px;
+      height: 52px;
+      flex: 0 0 52px;
+      place-items: center;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface-2);
+      color: var(--text);
+      box-shadow: 0 10px 22px rgba(15, 23, 42, 0.08);
+      cursor: pointer;
+      transition: transform 160ms ease, background-color 160ms ease;
+    }
+
+    .theme-toggle:active { transform: scale(0.96); }
+
+    .theme-icon {
+      display: block;
+      font-size: 1.3rem;
+      line-height: 1;
+    }
+
+    .hero {
+      min-height: 100svh;
+      padding: calc(var(--header-h) + 20px) 16px 24px;
+      display: grid;
+      align-items: center;
+    }
+
+    .hero-shell {
+      width: min(100%, 1120px);
+      margin: 0 auto;
+      display: grid;
+      gap: 24px;
+    }
+
+    .hero-main {
+      display: grid;
+      gap: 20px;
+      padding: 20px 0 0;
+    }
+
+    .tagline {
+      display: inline-flex;
+      width: fit-content;
+      min-height: 36px;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 12px;
+      border: 1px solid color-mix(in srgb, var(--primary) 34%, var(--line));
+      border-radius: 999px;
+      background: color-mix(in srgb, var(--surface) 86%, var(--primary) 14%);
+      color: var(--primary-strong);
+      font-size: 0.88rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 10ch;
+      font: 700 clamp(2.5rem, 10vw, 4rem)/0.92 "Boska", Georgia, serif;
+      letter-spacing: 0;
+    }
+
+    .headline-detail {
+      display: block;
+      color: var(--primary);
+    }
+
+    .subcopy {
+      margin: 0;
+      max-width: 37rem;
+      color: var(--muted);
+      font-size: clamp(1.02rem, 2vw, 1.18rem);
+      font-weight: 500;
+    }
+
+    .dealer-strip {
+      width: min(100%, 620px);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      padding: 10px;
+      border: 1px solid color-mix(in srgb, var(--primary) 28%, var(--line));
+      border-radius: 12px;
+      background: color-mix(in srgb, var(--surface) 88%, var(--primary) 12%);
+      color: var(--text);
+      box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .dealer-label {
+      margin-right: 2px;
+    }
+
+    .dealer-pill {
+      display: inline-flex;
+      min-height: 34px;
+      align-items: center;
+      padding: 6px 10px;
+      border: 1px solid color-mix(in srgb, var(--primary) 30%, var(--line));
+      border-radius: 12px;
+      background: var(--surface);
+      color: var(--muted);
+      font-size: 0.95rem;
+      font-weight: 700;
+      box-shadow: 0 8px 16px rgba(15, 23, 42, 0.05);
+    }
+
+    .trust-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .trust-line li {
+      min-height: 36px;
+      padding: 6px 10px;
+      border-radius: 12px;
+      background: var(--surface);
+      border: 1px solid var(--line);
+      color: var(--text);
+      font-size: 0.91rem;
+      font-weight: 700;
+      box-shadow: 0 8px 18px rgba(15, 23, 42, 0.06);
+    }
+
+    .hero-actions {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      width: 100%;
+    }
+
+    .hero-pair {
+      display: grid;
+     grid-template-columns: repeat(2, minmax(0, 1fr));
+     gap: 16px;
+    }
+
+     .hero-pair .btn {
+      min-width: 0;
+      padding-inline: 10px;
+    }
+
+
+    .btn {
+      position: relative;
+      isolation: isolate;
+      display: inline-flex;
+      min-height: 56px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      overflow: hidden;
+      border: 0;
+      border-radius: 12px;
+      padding: 14px 18px;
+      color: #ffffff;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.2;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      transform: translateZ(0);
+      transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+    }
+
+    .btn:focus-visible,
+    .chip:focus-visible,
+    .theme-toggle:focus-visible,
+    .map-pin:focus-visible{
+      outline: 3px solid color-mix(in srgb, var(--success) 70%, white 30%);
+      outline-offset: 3px;
+    }
+
+    .btn:hover,
+    .btn:active {
+      transform: scale(1.05);
+      box-shadow: 0 22px 48px rgba(30, 64, 175, 0.24);
+    }
+
+    .btn-call {
+      background: var(--primary);
+      animation: callGlow 2.8s ease-in-out infinite;
+    }
+
+    .btn-whatsapp {
+      background: var(--success);
+      box-shadow: 0 18px 38px rgba(16, 185, 129, 0.22);
+    }
+
+    .btn-map {
+      background: #0f172a;
+    }
+
+    :root[data-theme="dark"] .btn-map {
+      background: #f8fafc;
+      color: #0f172a;
+    }
+
+    .urgency {
+      display: inline-flex;
+      width: fit-content;
+      min-height: 38px;
+      align-items: center;
+      gap: 8px;
+      margin: 0;
+      padding: 7px 12px;
+      border-radius: 12px;
+      background: color-mix(in srgb, var(--success) 13%, var(--surface));
+      border: 1px solid color-mix(in srgb, var(--success) 45%, var(--line));
+      color: color-mix(in srgb, var(--success-strong) 82%, var(--text));
+      font-weight: 700;
+    }
+
+    .ad-panel,
+    .location-box,
+    .trust-card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .ad-panel {
+      display: grid;
+      gap: 14px;
+      overflow: hidden;
+    }
+
+    .panel-top {
+      display: grid;
+      gap: 10px;
+      padding: 18px;
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .panel-top strong {
+      font: 700 1.45rem/1.05 "Boska", Georgia, serif;
+    }
+
+    .panel-top span {
+      font-weight: 500;
+      opacity: 0.94;
+    }
+
+    .stock-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      padding: 0 18px;
+      margin: 0;
+      list-style: none;
+    }
+
+    .stock-list li {
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border-radius: 12px;
+      background: var(--surface-2);
+      color: var(--text);
+      font-weight: 700;
+    }
+
+    .panel-contact {
+      display: grid;
+      gap: 8px;
+      padding: 0 18px 18px;
+    }
+
+    .panel-contact p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .phone-big {
+      color: var(--primary-strong);
+      font-size: 1.55rem;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    main {
+      display: grid;
+      gap: 32px;
+      width: min(100%, 1120px);
+      margin: 0 auto;
+      padding: 0 16px 32px;
+    }
+
+    .section {
+      display: grid;
+      gap: 16px;
+    }
+
+    .section h2 {
+      margin: 0;
+      font: 700 clamp(1.55rem, 5vw, 2.35rem)/1 "Boska", Georgia, serif;
+    }
+
+    .section-lead {
+      margin: 0;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .chips,
+    .trust-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .chip {
+      min-height: 52px;
+      border: 1px solid color-mix(in srgb, var(--primary) 24%, var(--line));
+      border-radius: 12px;
+      background: var(--surface);
+      color: var(--text);
+      padding: 12px 14px;
+      font: 700 1rem/1.2 "Satoshi", system-ui, sans-serif;
+      text-align: left;
+      cursor: pointer;
+      box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
+      transition: transform 160ms ease, color 160ms ease, background-color 160ms ease;
+    }
+
+    .chip:hover,
+    .chip:active {
+      color: #ffffff;
+      background: var(--success);
+      transform: translateY(-2px);
+      animation: chipBounce 420ms ease;
+    }
+
+    .trust-grid {
+      perspective: 900px;
+    }
+
+    .trust-card {
+      min-height: 116px;
+      padding: 16px;
+      transition: transform 180ms ease, box-shadow 180ms ease;
+    }
+
+    .trust-card:hover,
+    .trust-card:active {
+      transform: translateY(-6px) rotateX(5deg);
+    }
+
+    .trust-card strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 1.05rem;
+      line-height: 1.2;
+    }
+
+    .trust-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .location-box {
+      display: grid;
+      gap: 16px;
+      padding: 18px;
+    }
+
+    .map-pin {
+      display: grid;
+      gap: 4px;
+      min-height: 72px;
+      padding: 14px;
+      border: 1px solid color-mix(in srgb, var(--primary) 24%, var(--line));
+      border-radius: 12px;
+      background: var(--surface-2);
+      color: var(--text);
+      text-decoration: none;
+    }
+
+    .map-pin strong {
+      font-size: 1.05rem;
+      line-height: 1.2;
+    }
+
+    .map-pin span {
+      color: var(--muted);
+      font-size: 0.95rem;
+      line-height: 1.35;
+    }
+
+    .address-lines {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      color: var(--muted);
+      font-style: normal;
+    }
+
+    .address-lines b {
+      color: var(--text);
+    }
+
+    
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 520ms ease, transform 520ms ease;
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes callGlow {
+      0%, 100% { box-shadow: 0 16px 34px rgba(30, 64, 175, 0.2); }
+      50% { box-shadow: 0 18px 42px rgba(30, 64, 175, 0.38), 0 0 0 8px rgba(30, 64, 175, 0.1); }
+    }
+
+    @keyframes chipBounce {
+      0%, 100% { transform: translateY(-2px) scale(1); }
+      45% { transform: translateY(-6px) scale(1.02); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.001ms !important;
+      }
+    }
+
+    @media (min-width: 520px) {
+      .chips,
+      .trust-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .btn-map {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (min-width: 800px) {
+      .hero {
+        padding-inline: 24px;
+      }
+
+      .hero-shell {
+        grid-template-columns: minmax(0, 1.08fr) minmax(300px, 0.72fr);
+        align-items: center;
+        gap: 48px;
+      }
+
+      h1 {
+        max-width: 12ch;
+      }
+
+      .hero-actions {
+        max-width: 620px;
+      }
+
+
+      .chips,
+      .trust-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+      }
+
+      .location-box {
+        grid-template-columns: minmax(0, 1fr) 240px;
+        align-items: center;
+      }
+
+       }
+
+    @media (max-width: 390px) {
+      .hero-pair {
+        gap: 10px;
+      }
+
+      .hero-pair .btn {
+        font-size: 0.88rem;
+      }
+    }   
+</style>
+</head>
+
+<body>
+  <div class="page">
+    <header class="site-header" aria-label="Vaishno Enterprises quick contact">
+      <div class="header-inner">
+        <a class="brand" href="tel:9650911999" aria-label="Call Vaishno Enterprises">
+          <span class="brand-mark" aria-hidden="true">VE</span>
+          <span class="brand-text">
+            <span class="brand-name">Vaishno Enterprises</span>
+            <span class="brand-place">RDC Raj Nagar</span>
+          </span>
+        </a>
+
+        <button class="theme-toggle" type="button" aria-label="Switch to dark mode" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">☀️</span>
+        </button>
+      </div>
+    </header>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-shell">
+        <div class="hero-main reveal">
+          <span class="tagline">⚡ Electrical solutions</span>
+
+          <h1 id="hero-title">
+            Vaishno Enterprises
+            <span class="headline-detail">Opposite BSNL Exchange RDC</span>
+          </h1>
+
+          <p class="subcopy">Genuine Wires - Switches - Lights - Same Day Delivery</p>
+
+          <div class="dealer-strip" aria-label="Authorized dealer brands">
+            <span class="dealer-label">Dealers:</span>
+            <span class="dealer-pill">Finole</span>
+            <span class="dealer-pill">Philips</span>
+            <span class="dealer-pill">Legrand</span>
+            <span class="dealer-pill">Norisys</span>
+            <span class="dealer-pill">Crompton</span>
+            <span class="dealer-pill">AO Smith</span>
+            <span class="dealer-pill">Legero</span>
+            <span class="dealer-pill">Havells</span>
+          </div>
+
+          <ul class="trust-line" aria-label="Shop trust signals">
+            <li>✅ 100% Genuine</li>
+            <li>✅ Best Prices</li>
+            <li>✅ Local Service</li>
+          </ul>
+
+          <div class="hero-actions" aria-label="Primary contact actions">
+            <div class="hero-pair">
+              <a href="tel:9650911999" class="btn btn-call">📞 CALL 9650911999</a>
+              <a class="btn btn-whatsapp" href="https://wa.me/9650911999?text=Hi%2C%20need%20electrical%20items" target="_blank" rel="noopener noreferrer">WHATSAPP</a>
+            </div>
+
+            <a class="btn btn-map" data-map-link href="#" target="_blank" rel="noopener noreferrer">GET DIRECTIONS</a>
+          </div>
+
+          <p class="urgency">📞 Call/Whatsapp Open 10AM-8PM</p>
+        </div>
+
+        <aside class="ad-panel reveal" aria-label="Vaishno Enterprises shop details">
+          <div class="panel-top">
+            <strong>Fast electrical supply near you</strong>
+            <span>RDC Raj Nagar shop support for urgent site material, home repairs and contractor orders.</span>
+          </div>
+
+          <ul class="stock-list" aria-label="Available product categories">
+            <li>Wires</li>
+            <li>Switches</li>
+            <li>Lights</li>
+            <li>MCB</li>
+          </ul>
+
+          <div class="panel-contact">
+            <p>Tap once. Dial instantly.</p>
+            <a class="phone-big" href="tel:9650911999">9650911999</a>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <main>
+      <section class="section reveal" aria-labelledby="quick-title">
+        <h2 id="quick-title">Quick WhatsApp</h2>
+        <p class="section-lead">Send the right enquiry in one tap.</p>
+
+        <div class="chips" role="list" aria-label="Prefilled WhatsApp messages">
+          <button class="chip" type="button" onclick="quickMessage('Need wires & switches quote')">Need wires quote</button>
+          <button class="chip" type="button" onclick="quickMessage('Share your product catalog')">Product catalog</button>
+          <button class="chip" type="button" onclick="quickMessage('Urgent electrical items')">Urgent electrical items</button>
+          <button class="chip" type="button" onclick="quickMessage('I\'m nearby - current offers?')">I'm nearby - offers?</button>
+        </div>
+      </section>
+
+      <section class="section reveal" aria-labelledby="trust-title">
+        <h2 id="trust-title">Why locals call first</h2>
+
+        <div class="trust-grid">
+          <article class="trust-card">
+            <strong>✅ 100% Genuine</strong>
+            <p>Known electrical brands and dependable shop guidance before you buy.</p>
+          </article>
+
+          <article class="trust-card">
+            <strong>✅ Same Day Delivery</strong>
+            <p>Fast local dispatch for nearby homes, offices and contractor sites.</p>
+          </article>
+
+          <article class="trust-card">
+            <strong>✅ Best Prices</strong>
+            <p>Quick quotes for wires, switches, lights and regular electrical items.</p>
+          </article>
+
+          <article class="trust-card">
+            <strong>✅ Local Service</strong>
+            <p>Easy to reach in RDC Raj Nagar, opposite BSNL Telephone Exchange.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section reveal" aria-labelledby="location-title">
+        <h2 id="location-title">Find the shop</h2>
+
+        <div class="location-box">
+          <div>
+            <a class="map-pin" data-map-link href="#" target="_blank" rel="noopener noreferrer" aria-label="Open Google Maps directions to Vaishno Enterprises">
+              <strong>📍 Vaishno Enterprises, D-1 M.G Tower</strong>
+              <span>Opposite BSNL Telephone Exchange RDC</span>
+            </a>
+          </div>
+
+          <address class="address-lines">
+            <span><b>Address:</b> Vaishno Enterprises, Plot no. D-1 M.G Tower, RDC Raj Nagar, Raj Nagar, Ghaziabad, Uttar Pradesh 201002</span>
+            <span><b>Landmark:</b> Opposite BSNL Telephone Exchange RDC</span>
+            <span><b>GPS:</b> 28.67524560531833, 77.44195421044807</span>
+          </address>
+        </div>
+      </section>
+    </main>
+
+ 
+  </div>
+
+  <script>
+    const phone = "9650911999";
+    const mapUrl = "https://www.google.com/maps/dir/28.6710818,77.4780713/Vaishno+Enterprises+Finolex+Wires,+D-1,+M.G.+Tower,+RDC,+RAJNAGAR,+OPP-+TELEPHONE+EXCHANGE,+Raj+Nagar,+Ghaziabad,+Uttar+Pradesh+201002/@28.6741052,77.449646,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x390cf1bc768da339:0xe2e82931a63ae7b3!2m2!1d77.4418201!2d28.6750244?entry=ttu&g_ep=EgoyMDI2MDUwMi4wIKXMDSoASAFQAw%3D%3D";
+
+    const root = document.documentElement;
+    const themeToggle = document.querySelector(".theme-toggle");
+    const themeIcon = document.querySelector(".theme-icon");
+
+    document.querySelectorAll("[data-map-link]").forEach((link) => {
+      link.href = mapUrl;
+    });
+
+    function quickMessage(msg) {
+      window.open(`https://wa.me/${phone}?text=${encodeURIComponent(msg)}`, "_blank", "noopener,noreferrer");
+    }
+
+    function preferredTheme() {
+      return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+    }
+
+    function setTheme(theme) {
+      root.dataset.theme = theme;
+      localStorage.setItem("vaishno-theme", theme);
+
+      const isDark = theme === "dark";
+      themeToggle.setAttribute("aria-pressed", String(isDark));
+      themeToggle.setAttribute("aria-label", isDark ? "Switch to light mode" : "Switch to dark mode");
+      themeIcon.textContent = isDark ? "🌙" : "☀️";
+      document.querySelector('meta[name="theme-color"]').setAttribute("content", isDark ? "#0f172a" : "#1e40af");
+    }
+
+    setTheme(localStorage.getItem("vaishno-theme") || preferredTheme());
+
+    themeToggle.addEventListener("click", () => {
+      setTheme(root.dataset.theme === "dark" ? "light" : "dark");
+    });
+
+    const observer = "IntersectionObserver" in window
+      ? new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-visible");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.16 })
+      : null;
+
+    document.querySelectorAll(".reveal").forEach((item) => {
+      if (observer) observer.observe(item);
+      else item.classList.add("is-visible");
+    });
+
+    const manifest = {
+      name: "Vaishno Enterprises Electrical Shop",
+      short_name: "Vaishno",
+      start_url: ".",
+      display: "standalone",
+      background_color: "#f8fafc",
+      theme_color: "#1e40af",
+      description: "Call Vaishno Enterprises in RDC Raj Nagar, Ghaziabad for electrical items.",
+      categories: ["business", "shopping"],
+      icons: [{
+        src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='42' fill='%231e40af'/%3E%3Ctext x='96' y='116' text-anchor='middle' font-size='58' font-family='Arial' font-weight='700' fill='white'%3EVE%3C/text%3E%3C/svg%3E",
+        sizes: "192x192",
+        type: "image/svg+xml",
+        purpose: "any maskable"
+      }]
+    };
+
+    const manifestLink = document.createElement("link");
+    manifestLink.rel = "manifest";
+    manifestLink.href = URL.createObjectURL(new Blob([JSON.stringify(manifest)], { type: "application/manifest+json" }));
+    document.head.appendChild(manifestLink);
+
+    window.vaishnoAd = { phone, mapUrl, quickMessage };
+  </script>
+</body>
+</html>
